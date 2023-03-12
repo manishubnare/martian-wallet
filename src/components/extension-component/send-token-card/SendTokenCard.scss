@@ -1,0 +1,67 @@
+.send-token-popup {
+  padding: 10px 20px;
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: bottom 3s ease-in-out;
+  height: 360px;
+  background: #ffffff;
+  border-radius: 12px;
+
+  .popup-header {
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+
+    span {
+      font-family: "System85 Trial";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      /* identical to box height, or 114% */
+      color: #000000;
+      text-shadow: -14.9754px 19.9672px 39.9343px rgba(0, 0, 0, 0.1);
+      transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px 10px;
+    height: 30px;
+    top: 10px;
+    position: relative;
+  }
+
+  .search-box input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    margin-left: 5px;
+  }
+
+  .token-list {
+    position: relative;
+    top: 20px;
+  }
+
+  .preview-button {
+    position: fixed;
+    bottom: 10px;
+  }
+}
+
+.show {
+  bottom: 0;
+}

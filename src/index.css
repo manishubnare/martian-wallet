@@ -1,4 +1,4 @@
-body {
+html, body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: 'PP Editorial New';
+  src: local("PPEditorialNew-Light.ttf"),
+    url(./fonts/PPEditorialNew-Light.ttf) format("truetype");;
+}
+
+@font-face {
+  font-family: 'System85 Trial';
+  src: local("system85-regular-trial"),
+    url(./fonts/system85-regular-trial.otf) format("opentype");;
 }

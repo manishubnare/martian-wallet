@@ -1,0 +1,120 @@
+.preview-send-token-popup {
+  padding: 10px 20px;
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 1;
+  transition: bottom 2s ease-in-out;
+  height: 360px;
+  background: #ffffff;
+  border-radius: 12px;
+
+  .preview-popup-header {
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+
+    span{
+      font-family: 'System85 Trial';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      /* identical to box height, or 114% */
+      color: #000000;
+      text-shadow: -14.9754px 19.9672px 39.9343px rgba(0, 0, 0, 0.1);
+      transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+  }
+
+  .sending-token-info-box {
+    left: 0;
+    height: 113px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    background: linear-gradient(180deg, #ffffff -3.43%, #ffffff 87.99%);
+    mix-blend-mode: multiply;
+    box-shadow: 0px 11.415px 14.2049px rgba(102, 102, 102, 0.07);
+    padding: 5px 10px;
+
+    .sending-token-details{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .token-quantity-sec{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        font-family: 'System85 Trial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 29.8207px;
+        line-height: 28px;
+        color: #818181;
+      }
+
+      .total-token-quantity{
+        font-family: 'System85 Trial';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13.0466px;
+        line-height: 12px;
+        color: #000000;
+        position: relative;
+        top: 10px;
+      }
+    }
+  }
+
+  .send-text{
+    display: flex;
+    position: relative;
+    top: 20px;
+    font-family: 'System85 Trial';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13.9992px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+    letter-spacing: -0.01em;
+    color: #000000;
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px 10px;
+    height: 30px;
+    top: 30px;
+    position: relative;
+  }
+
+  .search-box input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    margin-left: 5px;
+  }
+
+  .preview-button {
+    position: fixed;
+    bottom: 10px;
+  }
+}
+
+.show {
+  bottom: 0;
+}

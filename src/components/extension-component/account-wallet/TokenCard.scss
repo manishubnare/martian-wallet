@@ -1,0 +1,113 @@
+.token-card {
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  background: #ffffff;
+  box-shadow: 0px 3.99343px 19.9672px rgba(0, 0, 0, 0.08);
+  border-radius: 7.98687px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+
+  .token-logo {
+    display: flex;
+    align-items: center;
+    width: 32.95px;
+    height: 32.95px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+
+  .name-rate-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    width: 100%;
+    height: 40px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+
+    .name-sec {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .token-name {
+        display: flex;
+        align-items: center;
+        font-family: "System85 Trial";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height, or 143% */
+
+        text-transform: capitalize;
+        color: #000000;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+      }
+
+      .token-converted-rate {
+        display: flex;
+        align-items: center;
+        font-family: "System85 Trial";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height, or 143% */
+        color: #000000;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+      }
+    }
+
+    .rate-sec {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .rate-details {
+        display: flex;
+        align-items: center;
+        font-family: "System85 Trial";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height, or 143% */
+        text-transform: capitalize;
+        color: #818181;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+      }
+
+      .approx-converted-rate {
+        display: flex;
+        align-items: center;
+        font-family: "System85 Trial";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height, or 143% */
+        color: #818181;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+      }
+    }
+  }
+}
+
+.show-as-list {
+  box-shadow: none;
+  margin: 0;
+  border-bottom: 1px solid #e9e8e4;
+  border-radius: 0px;
+}
+
+.show-as-list:last-child {
+  border-bottom: none;
+}

@@ -1,0 +1,10 @@
+html, body{
+  width: 360px;
+  height: 600px;
+}
+
+.main-app {
+  width: 360px;
+  height: 600px;
+  text-align: center;
+}

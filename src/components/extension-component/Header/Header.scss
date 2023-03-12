@@ -1,0 +1,43 @@
+.header {
+  position: fixed;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .token-details {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    background: #fafafa;
+    border-radius: 100px;
+    height: 36px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+
+    span {
+      font-family: "System85 Trial";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 25px;
+      color: #000000;
+    }
+  }
+
+  .token-details img:first-child {
+    margin-right: 5px;
+    margin-left: 2px;
+  }
+
+  .token-details img:last-child {
+    margin-left: 5px;
+    margin-right: 2px;
+  }
+
+  .notification-sec {
+    margin-right: 20px;
+  }
+}

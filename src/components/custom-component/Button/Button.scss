@@ -1,0 +1,195 @@
+.button-border-box {
+  position: relative;
+  height: 60px;
+  background: #000000;
+  border-radius: 8.65532px;
+  width: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid black;
+
+  @media only screen and (max-width: 450px) and (min-width: 300px) {
+    width: 160px;
+    height: 48px;
+  }
+
+  .button-inner-border {
+    position: absolute;
+    border: 2.18518px solid #ffffff;
+    border-radius: 2.18518px;
+    box-sizing: border-box;
+    height: 50px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: 450px) and (min-width: 300px) {
+      width: 150px;
+      height: 40px;
+    }
+  }
+
+  .hide-horizontal-border {
+    position: absolute;
+    width: 520px;
+    height: 36px;
+    background-color: black;
+
+    @media only screen and (max-width: 450px) and (min-width: 300px) {
+      width: 160px;
+      height: 24px;
+    }
+  }
+
+  .hide-verticle-border {
+    position: absolute;
+    width: 480px;
+    height: 60px;
+    background-color: black;
+
+    @media only screen and (max-width: 450px) and (min-width: 300px) {
+      width: 130px;
+      height: 48px;
+    }
+  }
+
+  button {
+    position: absolute;
+    background-color: #000000;
+    color: #ffffff;
+    width: 480px;
+    height: 36px;
+    font-family: "System85 Trial";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19.4745px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 0px;
+
+    @media only screen and (max-width: 450px) and (min-width: 300px) {
+      width: 150px;
+      height: 20px;
+    }
+  }
+}
+
+.white-color-box {
+  background: #ffffff;
+  border: 2px solid black;
+
+  .button-inner-border {
+    border: 2.18518px solid black;
+  }
+
+  .hide-horizontal-border {
+    background-color: #ffffff;
+  }
+
+  .hide-verticle-border {
+    background-color: #ffffff;
+  }
+
+  button {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+.medium-length-button {
+  width: 320px;
+  height: 48px;
+
+  .button-inner-border {
+    width: 300px;
+    height: 40px;
+  }
+
+  .hide-horizontal-border {
+    width: 320px;
+    height: 24px;
+  }
+
+  .hide-verticle-border {
+    width: 280px;
+    height: 48px;
+  }
+
+  button {
+    width: 300px;
+    height: 20px;
+  }
+}
+
+.small-length-button {
+  width: 84px;
+  height: 40px;
+
+  .button-inner-border {
+    width: 74px;
+    height: 34px;
+  }
+
+  .hide-horizontal-border {
+    width: 84px;
+    height: 20px;
+  }
+
+  .hide-verticle-border {
+    width: 60px;
+    height: 38px;
+  }
+
+  button {
+    width: 76px;
+    height: 14px;
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 450px) and (min-width: 300px) {
+  .button-border-box:hover .hide-verticle-border {
+    width: 120px;
+  }
+
+  .button-border-box:hover .hide-horizontal-border {
+    height: 10px;
+  }
+
+  .medium-length-button:hover .hide-verticle-border {
+    width: 260px;
+  }
+
+  .medium-length-button:hover .hide-horizontal-border {
+    height: 16px;
+  }
+
+  .small-length-button:hover .hide-verticle-border{
+    width: 48px;
+  }
+
+  .small-length-button:hover .hide-horizontal-border{
+    height: 14px;
+  }
+
+}
+
+@media only screen and (min-width: 700px) {
+  .button-border-box:hover .hide-verticle-border {
+    width: 440px;
+  }
+
+  .button-border-box:hover .hide-horizontal-border {
+    height: 18px;
+  }
+}

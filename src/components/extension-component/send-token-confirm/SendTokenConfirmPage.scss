@@ -1,0 +1,183 @@
+.confirm-page {
+  padding: 5px 20px;
+  position: relative;
+
+  .back-input {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 60px;
+    align-items: center;
+    gap: 5px;
+
+    img {
+      height: 10px;
+      width: 10px;
+      cursor: pointer;
+    }
+
+    span {
+      font-family: "System85 Trial";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13.9992px;
+      line-height: 16px;
+      /* identical to box height, or 114% */
+      letter-spacing: -0.01em;
+      color: #000000;
+    }
+  }
+
+  .confirm-token-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    top: 140px;
+
+    .confirm-text {
+      font-family: "System85 Trial";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 19px;
+      /* identical to box height */
+      text-align: center;
+      color: #000000;
+    }
+
+    .token-info-sec {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .token-quantity-text {
+        font-family: "System85 Trial";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 50px;
+        /* identical to box height */
+        display: flex;
+        align-items: center;
+        color: #000000;
+        margin-left: 10px;
+        position: relative;
+        top: 5px;
+      }
+
+      .token-name-text {
+        font-family: "System85 Trial";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12.867px;
+        line-height: 12px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        text-transform: uppercase;
+        color: #000000;
+        transform: matrix(1, -0.01, 0, 1, 0, 0);
+      }
+    }
+
+    .converted-rate-text {
+      font-family: "System85 Trial";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13.0466px;
+      line-height: 12px;
+      /* identical to box height */
+      text-align: center;
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .send-text {
+    display: flex;
+    position: relative;
+    top: 200px;
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px 10px;
+    height: 30px;
+    top: 220px;
+    position: relative;
+  }
+
+  .search-box input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    margin-left: 5px;
+  }
+
+  .transaction-details {
+    display: flex;
+    flex-direction: column;
+    background: #fafafa;
+    border-radius: 8px;
+    position: relative;
+    top: 250px;
+    padding: 10px;
+    gap: 5px;
+
+    .summary-desc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .summary-key {
+        font-family: "System85 Trial";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 13px;
+        color: #999999;
+      }
+
+      .summary-value {
+        font-family: "System85 Trial";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 13px;
+        text-align: right;
+        color: #000000;
+      }
+    }
+  }
+
+  .preview-button {
+    position: fixed;
+    bottom: 50px;
+  }
+
+  .cancel-button {
+    width: 90%;
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    font-family: "System85 Trial";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #000000;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+}

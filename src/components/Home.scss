@@ -1,0 +1,43 @@
+.box-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  .progress-bar {
+    height: 5px;
+    background-color: black;
+    transition: width 0.5s ease-in-out;
+  }
+
+  .welcome-card {
+    width: 845px;
+    height: 600px;
+    background: #ffffff;
+    box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.06);
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  div {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+  }
+}
+
+.box-content .welcome-card div.slide-in {
+  animation-name: slideInRight;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
