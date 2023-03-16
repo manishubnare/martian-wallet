@@ -30,6 +30,10 @@
       text-shadow: -14.9754px 19.9672px 39.9343px rgba(0, 0, 0, 0.1);
       transform: matrix(1, 0, 0, 1, 0, 0);
     }
+
+    img{
+      cursor: pointer;
+    }
   }
 
   .search-box {
@@ -42,6 +46,10 @@
     height: 30px;
     top: 10px;
     position: relative;
+
+    img{
+      cursor: pointer;
+    }
   }
 
   .search-box input[type="text"] {
@@ -49,6 +57,12 @@
     border: none;
     outline: none;
     margin-left: 5px;
+    font-family: 'System85 Trial';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 13px;
+    color: #000000;
   }
 
   .token-list {

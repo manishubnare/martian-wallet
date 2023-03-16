@@ -1,8 +1,10 @@
-import React from "react";
+import React, { memo } from "react";
+import { convertToDecimal } from "../../../helper";
 import "./TokenCard.scss";
 
 function TokenDetailsCard(props) {
-  const { tokenLogo, tokenName, tokenPrice, showAsList = false } = props;
+  const { coinData, showAsList = false, tokenLogo } = props;
+  const { balance, coinName, name, decimals } = coinData;
   return (
     <div className={`token-card ${showAsList ? "show-as-list" : ""}`}>
       <div className="token-logo">
@@ -10,15 +12,12 @@ function TokenDetailsCard(props) {
       </div>
       <div className="name-rate-sec">
         <div className="name-sec">
-          <div className="token-name">{tokenName}</div>
-          <div className="token-converted-rate">{tokenPrice} &nbsp;USDC</div>
+          <div className="token-name">{coinName}</div>
+          <div className="token-converted-rate">{convertToDecimal(balance, decimals)} &nbsp; {name}</div>
         </div>
         <div className="rate-sec">
           <div className="rate-details">
-            <span>Stake & Earn </span>
-          </div>
-          <div className="approx-converted-rate">
-            <span>~5261</span>
+            <span>{name}</span>
           </div>
         </div>
       </div>
@@ -26,4 +25,4 @@ function TokenDetailsCard(props) {
   );
 }
 
-export default TokenDetailsCard;
+export default memo(TokenDetailsCard);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import WelcomePage from "./onboarding/Welcome/WelcomePage";
 import "./Home.scss";
 import CreateAccount from "./onboarding/CreateAccount/CreateAccount";
@@ -7,6 +7,14 @@ import Recovery from "./onboarding/Recovery/Recovery";
 import KeyShortcut from "./onboarding/KeyShortcut/KeyShortcut";
 import SetupNotification from "./onboarding/SetupNotification/SetupNotification";
 import FinishSetup from "./onboarding/FinishSetup/FinishSetup";
+import HidableComponent from "./HidableComponent";
+
+const CustomCreateAccount = HidableComponent(CreateAccount);
+const CustomRecovery = HidableComponent(Recovery);
+const CustomKeyShortcut = HidableComponent(KeyShortcut);
+const CustomSetupNotification = HidableComponent(SetupNotification);
+const CustomFinishSetup = HidableComponent(FinishSetup);
+
 
 const {
   WELCOME,
@@ -17,11 +25,12 @@ const {
   FINIST_SETUP,
 } = CARD_TYPES;
 
-function Home() {
+function Home(props) {
   const [activeCard, setActiveCard] = useState(WELCOME);
   const [progress, setProgress] = useState(0);
+  const { setShowPinMessage } = props;
 
-  const onChangeVisibility = (componentType, isGoingForward) => {
+  const onChangeVisibility = useCallback((componentType, isGoingForward) => {
     if (isGoingForward) {
       setActiveCard(componentType);
       setProgress(progress + 1);
@@ -29,7 +38,7 @@ function Home() {
       setActiveCard(componentType);
       setProgress(progress - 1);
     }
-  };
+  });
 
   const progressPercentage = (progress / 5) * 100;
 
@@ -40,28 +49,29 @@ function Home() {
           className="progress-bar"
           style={{ width: `${progressPercentage}%` }}
         />
-        <div className={`${activeCard !== WELCOME && "slide-in"}`}>
+        <div className={`${activeCard === CREATE_ACCOUNT ? "global-card slide-in" : " "}`}>
           <WelcomePage
             isHidden={!(activeCard === WELCOME)}
             handleCardVisibility={onChangeVisibility}
           />
-          <CreateAccount
+          <CustomCreateAccount
             isHidden={!(activeCard === CREATE_ACCOUNT)}
             handleCardVisibility={onChangeVisibility}
           />
-          <Recovery
+          <CustomRecovery
             isHidden={!(activeCard === RECOVERY)}
             handleCardVisibility={onChangeVisibility}
           />
-          <SetupNotification
+          <CustomSetupNotification
             isHidden={!(activeCard === SETUP_NOTIFICATION)}
             handleCardVisibility={onChangeVisibility}
           />
-          <KeyShortcut
+          <CustomKeyShortcut
             isHidden={!(activeCard === KEY_SHORTCUT)}
             handleCardVisibility={onChangeVisibility}
+            setShowPinMessage={setShowPinMessage}
           />
-          <FinishSetup
+          <CustomFinishSetup
             isHidden={!(activeCard === FINIST_SETUP)}
             handleCardVisibility={onChangeVisibility}
           />

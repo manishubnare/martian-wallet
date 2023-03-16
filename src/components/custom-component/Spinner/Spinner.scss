@@ -1,0 +1,33 @@
+.loader {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: loader-rotate 1.4s infinite linear;
+    border: 3px solid whitesmoke;
+    border-top-color: transparent;
+    position: relative;
+    top: -2px;
+  }
+
+  @keyframes loader-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.home-page .loader .loader-inner{
+    border: 3px solid black;
+    border-top-color: transparent;
+}

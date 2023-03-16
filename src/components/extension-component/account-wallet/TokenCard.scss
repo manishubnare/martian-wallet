@@ -9,6 +9,7 @@
   box-shadow: 0px 3.99343px 19.9672px rgba(0, 0, 0, 0.08);
   border-radius: 7.98687px;
   transform: matrix(1, 0, 0, 1, 0, 0);
+  cursor: pointer;
 
   .token-logo {
     display: flex;
@@ -40,7 +41,7 @@
         align-items: center;
         font-family: "System85 Trial";
         font-style: normal;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 14px;
         line-height: 20px;
         /* identical to box height, or 143% */
@@ -55,12 +56,14 @@
         align-items: center;
         font-family: "System85 Trial";
         font-style: normal;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 14px;
         line-height: 20px;
         /* identical to box height, or 143% */
         color: #000000;
         transform: matrix(1, 0, 0, 1, 0, 0);
+        position: relative;
+        top: 10px;
       }
     }
 

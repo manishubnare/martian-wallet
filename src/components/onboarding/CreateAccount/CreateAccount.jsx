@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+/*global chrome*/
+import React, { memo, useState } from "react";
 import "./CreateAccount.scss";
 import infoMark from "../../../logo/info-mark.svg";
 import Button from "../../custom-component/Button/Button";
 import { CARD_TYPES } from "../../../constants/App";
 import CardHeader from "../../CardHeader";
+import { useCreateNewAccount } from "../../../hooks/account";
+import { updateData } from "../../../hooks/query";
 
 function CreateAccount(props) {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [agree, setAgree] = useState(false);
   const { isHidden, handleCardVisibility } = props;
+  const { createWallet, isLoading} = useCreateNewAccount();
 
   if (isHidden) {
     return null;
@@ -23,13 +27,22 @@ function CreateAccount(props) {
     setConfirmPassword(event.target.value);
   };
 
-  const handleAgreeChange = (event) => {
+  const handleAgreeChange = async(event) => {
     setAgree(event.target.checked);
+    if(password !== confirmPassword){
+      alert('Your password do not match');
+    }
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    handleCardVisibility(CARD_TYPES.RECOVERY, true);
+    createWallet(null, {
+      onSuccess: (data) => {
+        chrome.storage.local.set({'account_details': data});
+        updateData('storeAccountDetails', data)
+        handleCardVisibility(CARD_TYPES.RECOVERY, true);
+      }
+    });
   };
 
   return (
@@ -108,4 +121,4 @@ function CreateAccount(props) {
   );
 }
 
-export default CreateAccount;
+export default memo(CreateAccount);

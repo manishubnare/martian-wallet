@@ -1,11 +1,11 @@
-import React from "react";
+import React, { memo } from "react";
 import { CARD_TYPES } from "../../../constants/App";
 import CardHeader from "../../CardHeader";
 import Button from "../../custom-component/Button/Button";
 import "./KeyShortcut.scss";
 
 function KeyShortcut(props) {
-  const { isHidden, handleCardVisibility } = props;
+  const { isHidden, handleCardVisibility, setShowPinMessage } = props;
   if (isHidden) {
     return null;
   }
@@ -44,11 +44,11 @@ function KeyShortcut(props) {
       <div className="continue-button">
         <Button
           text="Continue"
-          onClick={() => handleCardVisibility(CARD_TYPES.FINIST_SETUP, true)}
+          onClick={() => (handleCardVisibility(CARD_TYPES.FINIST_SETUP, true), setShowPinMessage(true))}
         />
       </div>
     </div>
   );
 }
 
-export default KeyShortcut;
+export default memo(KeyShortcut);

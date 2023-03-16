@@ -1,6 +1,7 @@
-import React from "react";
+/*global chrome*/
+import React, { memo } from "react";
 import "./FinishSetup.scss";
-import martianLogo from "../../../logo/martian-big-logo.svg";
+import martianLogo from "../../../logo/martian-logo.svg";
 import discord from "../../../logo/discord.svg";
 import twitter from "../../../logo/twitter.svg";
 import nft from "../../../logo/nft.svg";
@@ -12,6 +13,12 @@ function FinishSetup(props) {
   const { isHidden, handleCardVisibility } = props;
   if (isHidden) {
     return null;
+  }
+
+  const handleCloseTab = () => {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+      chrome.tabs.remove(tabs[0].id);
+    });
   }
 
   return (
@@ -45,15 +52,15 @@ function FinishSetup(props) {
           <span>Follow Martian on Twitter</span>
         </div>
         <div className="keyshortcut-box">
-          <img src={nft} alt="logo" height="34px" width="34px" />
+          <img src={nft} alt="logo" height="26px" width="26px" style={{ marginTop: '8px' }} />
           <span>Browse & Shop for Aptos NFTs</span>
         </div>
       </div>
       <div className="continue-button">
-        <Button text="FINISH" />
+        <Button text="FINISH" onClick={() => handleCloseTab()} />
       </div>
     </div>
   );
 }
 
-export default FinishSetup;
+export default memo(FinishSetup);

@@ -29,15 +29,16 @@
         top: 0;
 
         .account-name {
-          font-family: "System85 Trial";
+          font-family: 'System85 Trial';
           font-style: normal;
-          font-weight: 500;
+          font-weight: 600;
           font-size: 20px;
-          line-height: 22px;
+          line-height: 24px;
           display: flex;
           align-items: center;
           letter-spacing: -0.02em;
           color: #000000;
+          text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 
           img {
             margin-left: 5px;
@@ -49,6 +50,9 @@
         height: 28px;
         position: relative;
         bottom: 0;
+        background: #FAFAFA;
+        border-radius: 6px;
+        width: 101px;
 
         .key-address-box {
           height: 23.98px;
@@ -57,6 +61,7 @@
           justify-content: space-between;
           align-items: center;
           width: fit-content;
+          cursor: pointer;
 
           span {
             font-family: "System85 Trial";
@@ -82,16 +87,31 @@
     .token-value-text {
       width: 192.51px;
       height: 48px;
+      display: flex;
+      align-items: baseline;
 
-      font-family: "System85 Trial";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 47.9212px;
-      line-height: 48px;
-      /* identical to box height, or 100% */
-      letter-spacing: -1.49754px;
-      color: #000000;
-      transform: matrix(1, 0, 0, 1, 0, 0);
+      .token-quantity{
+        font-family: "System85 Trial";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 47.9212px;
+        line-height: 48px;
+        letter-spacing: -1.49754px;
+        color: #000000;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+      }
+
+      .token-name{
+        font-family: "System85 Trial";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 14px;
+        letter-spacing: 1px;
+        color: #838078;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        margin-left: 5px;
+      }
     }
 
     .buy-send-button {
@@ -121,4 +141,17 @@
             transform: matrix(1, 0, 0, 1, 0, 0);
         }
     }
+
+    .account-details .account-key-sec .key-address-box{
+      filter: blur(5px);
+      background: rgba(0, 0, 0, 0.2);
+      transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+}
+
+.home-page{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
 }

@@ -10,8 +10,11 @@ import {
 } from "react-router-dom";
 import SendTokenConfirmPage from './components/extension-component/send-token-confirm/SendTokenConfirmPage';
 import App from './App'
+import { QueryClientProvider } from "react-query";
+import { queryClient } from './hooks/query';
 import './fonts/PPEditorialNew-Light.ttf'
 import './fonts/system85-regular-trial.otf'
+
 
 const router = createMemoryRouter([
   {
@@ -27,14 +30,18 @@ const router = createMemoryRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </React.StrictMode>
 );
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <React.StrictMode>
-//     <App />
+//     <QueryClientProvider client={queryClient} >
+//       <App />
+//     </QueryClientProvider>
 //   </React.StrictMode>
 // );
 
@@ -45,3 +52,4 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+

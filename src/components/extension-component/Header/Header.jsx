@@ -9,7 +9,7 @@ function Header() {
     <div className="header">
       <div className="token-details">
         <img src={aptosLogo} alt="logo" width="24px" height="24px" />
-        <span>Aptos</span>
+        <span>Aptos Testnet</span>
         <img src={downArrowLogo} alt="logo" />
       </div>
       <div className="notification-sec">

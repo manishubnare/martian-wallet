@@ -17,16 +17,16 @@
     border-radius: 24px;
     position: relative;
     overflow: hidden;
-  }
 
-  div {
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    opacity: 1;
+    .global-card {
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      opacity: 1;
+    }
   }
 }
 
-.box-content .welcome-card div.slide-in {
+.slide-in {
   animation-name: slideInRight;
 }
 

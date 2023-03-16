@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./Welcome.scss";
 import walletlogo from "../../../logo/wallet-logo.svg";
 import importWalletlogo from "../../../logo/import-wallet.svg";
@@ -31,13 +31,11 @@ function WelcomePage(props) {
         </div>
         <div className="text-container">
           <div className="box-heading">
-            <span>Create a New Wallet</span>
+            Create a New Wallet
           </div>
           <div className="box-description">
-            <span>
-              Get started by creating your very first wallet to hold, trade and
-              exchange crypto assets
-            </span>
+            Get started by creating your very first wallet to hold, trade and
+            exchange crypto assets
           </div>
         </div>
       </div>
@@ -61,4 +59,4 @@ function WelcomePage(props) {
   );
 }
 
-export default WelcomePage;
+export default memo(WelcomePage);

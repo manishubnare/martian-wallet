@@ -15,11 +15,11 @@ code {
 @font-face {
   font-family: 'PP Editorial New';
   src: local("PPEditorialNew-Light.ttf"),
-    url(./fonts/PPEditorialNew-Light.ttf) format("truetype");;
+    url(./fonts/PPEditorialNew-Regular.otf) format("opentype");
 }
 
 @font-face {
   font-family: 'System85 Trial';
   src: local("system85-regular-trial"),
-    url(./fonts/system85-regular-trial.otf) format("opentype");;
+    url(./fonts/system85-regular-trial.otf) format("opentype");
 }

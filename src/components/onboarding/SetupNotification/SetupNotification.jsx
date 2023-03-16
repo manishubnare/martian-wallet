@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import "./SetupNotification.scss";
 import martianBigLogo from "../../../logo/martian-big-logo.svg";
 import topaz from "../../../logo/topaz.svg";
@@ -9,13 +9,13 @@ import { CARD_TYPES } from "../../../constants/App";
 import CardHeader from "../../CardHeader";
 
 function SetupNotification(props) {
-  const [isOn, setIsOn] = useState(false);
+  const [isOn, setIsOn] = useState(true);
   const { isHidden, handleCardVisibility } = props;
   if (isHidden) {
     return null;
   }
 
-  const handleToggle = () => {
+  const handleNotificationToggle = () => {
     setIsOn(!isOn);
   };
 
@@ -46,7 +46,7 @@ function SetupNotification(props) {
             </div>
           </div>
           <div className="toggle-section">
-            <div className="toggle-container" onClick={handleToggle}>
+            <div className="toggle-container" onClick={handleNotificationToggle}>
               <div className={`dialog-button ${isOn ? "on" : "off"}`}>
                 <div
                   className={`dialog-button-circle ${isOn ? "on" : "off"}`}
@@ -108,4 +108,4 @@ function SetupNotification(props) {
   );
 }
 
-export default SetupNotification;
+export default  memo(SetupNotification);
